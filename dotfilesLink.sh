@@ -1,2 +1,3 @@
 #!/bin/sh
-ln -s ./dotfiles/.vimrc ~/.vimrc
+current_dir=$(pwd)
+ln -sf "$current_dir/.vimrc" ~/.vimrc
