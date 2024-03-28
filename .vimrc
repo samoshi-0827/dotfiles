@@ -44,11 +44,11 @@ noremap <S-l> $
 " 「+」「-」でインクリメント・デクリメントする
 nnoremap + <C-a>
 nnoremap - <C-x>
-"  貼り付け先のインデントに合わせてペーストする
+" 貼り付け先のインデントに合わせてペーストする
 nnoremap p ]p
 nnoremap P ]P
 " redoの再割り当て
-inoremap <S-u> <C-r>
+nnoremap <S-u> <C-r>
 
 nnoremap <Leader>p "+p
 nnoremap <Leader>w :w<CR>
