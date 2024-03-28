@@ -1,0 +1,57 @@
+{
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+      // "<C-a>": false,
+      // "<C-f>": false
+    },  
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#161821", "#818596"],
+    "vim.statusBarColors.insert": ["#84A0C6", "#161821"],
+    "vim.statusBarColors.visual": ["#B4BE82", "#161821"],
+    "vim.statusBarColors.visualline": ["#B4BE82", "#161821"],
+    "vim.statusBarColors.visualblock": ["#B4BE82", "#161821"],
+    "vim.statusBarColors.replace": ["#E2A478", "#161821"],
+    "vim.statusBarColors.commandlineinprogress": ["#818596", "#161821"],
+    "vim.statusBarColors.searchinprogressmode": ["#818596", "#161821"],
+    "vim.statusBarColors.easymotionmode": ["#818596", "#161821"],
+    "vim.statusBarColors.easymotioninputmode": ["#818596", "#161821"],
+    "vim.statusBarColors.surroundinputmode": ["#818596", "#161821"],
+
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/.vimrc",
+
+
+    "editor.renderLineHighlight": "all",
+    "workbench.colorCustomizations": {
+      "editor.lineHighlightBorder": "#ffffff00",
+      "[Default Dark+]": {
+          "editor.lineHighlightBackground": "#ffffff10",
+      },
+      "[Default Light+]": {
+          "editor.lineHighlightBackground": "#ffffff10",
+      }
+    },
+
+    // "// To improve performance",
+    "extensions.experimental.affinity": {
+      "vscodevim.vim": 1
+    } ,
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--header-insertion=never",
+        "--clang-tidy",
+        "--enable-config",
+    ],
+    "clangd.fallbackFlags": [
+        "-std=c++23"
+    ],
+
+    "editor.lineNumbers": "relative",
+    "editor.guides.indentation": true,
+}
