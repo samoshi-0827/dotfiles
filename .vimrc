@@ -36,6 +36,8 @@ set wildmode=list:longest
 let mapleader = "\<Space>"
 " Yの動作をDやCと同じにする
 map Y y$
+" copy all
+nnoremap , :%y<CR>
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
