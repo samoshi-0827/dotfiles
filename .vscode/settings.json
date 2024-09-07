@@ -2,7 +2,7 @@
     "notebook.lineNumbers": "on",
     "[python]": {
         "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.autopep8"
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
 
     "security.workspace.trust.untrustedFiles": "open",
@@ -69,10 +69,10 @@
     //nnoremap
     "vim.normalModeKeyBindingsNonRecursive": [
         { "before": [ "f" ], "after": ["leader", "leader", "leader", "b", "d", "w"] },
-        // { "before": ["<Leader>", "h"], "after": ["<C-w>", "h"] }, //window移動
-        { "before": ["<Leader>", "j"], "after": ["<C-w>", "j"] }, //window移動
-        { "before": ["<Leader>", "k"], "after": ["<C-w>", "k"] }, //window移動
-        // { "before": ["<Leader>", "l"], "after": ["<C-w>", "l"] }, //window移動
+        { "before": ["<Leader>", "h"], "after": ["<C-w>", "h"] }, //window移動
+        // { "before": ["<Leader>", "j"], "after": ["<C-w>", "j"] }, //window移動
+        // { "before": ["<Leader>", "k"], "after": ["<C-w>", "k"] }, //window移動
+        { "before": ["<Leader>", "l"], "after": ["<C-w>", "l"] }, //window移動
         // 検索結果を画面中央に
         { "before": ["n"], "after": ["n", "z", "z"] },
         { "before": ["N"], "after": ["N", "z", "z"] },
