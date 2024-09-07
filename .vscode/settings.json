@@ -1,14 +1,39 @@
 {
+    "notebook.lineNumbers": "on",
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "hediet.vscode-drawio.resizeImages": null,
+    "C_Cpp.intelliSenseUpdateDelay": 500,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    // "git.path": "/usr/bin"
+
+    "C_Cpp.autocompleteAddParentheses": true,
+    "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+    "aws.telemetry": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
+
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
-    
+
     "vim.leader": "<space>",
     "vim.handleKeys": {
       // "<C-a>": false,
       // "<C-f>": false
+        "<C-o>": false
     },  
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": ["#161821", "#818596"],
@@ -25,33 +50,70 @@
 
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/.vimrc",
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+
+    "amazonQ.telemetry": false,
+    "amazonQ.shareContentWithAWS": false,
+
+    "editor.lineNumbers": "relative",
+    "editor.guides.indentation": true,
+    "editor.renderLineHighlight": "all",
+    "editor.inlineSuggest.enabled": true,
+    "editor.accessibilitySupport": "off",
+
+    "vim.highlightedyank.enable": true, //yankした箇所をハイライト表示にする
+    "vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)", //yankした時の色
+    "vim.highlightedyank.duration": 150, //yankした時の色の表示時間
+    "vim.autoindent": true, //autoindent
+    "vim.visualstar": true, //カーソル上にあるワードを"*"で検索
+
+    //nnoremap
     "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": [ "f" ], "after": ["leader", "leader", "leader", "b", "d", "w"] },
+        // { "before": ["<Leader>", "h"], "after": ["<C-w>", "h"] }, //window移動
+        { "before": ["<Leader>", "j"], "after": ["<C-w>", "j"] }, //window移動
+        { "before": ["<Leader>", "k"], "after": ["<C-w>", "k"] }, //window移動
+        // { "before": ["<Leader>", "l"], "after": ["<C-w>", "l"] }, //window移動
+        // 検索結果を画面中央に
+        { "before": ["n"], "after": ["n", "z", "z"] },
+        { "before": ["N"], "after": ["N", "z", "z"] },
+        { "before": ["*"], "after": ["*", "z", "z"] },
+        { "before": ["#"], "after": ["#", "z", "z"] },
+
         {
-            "before": ["f"],
-            "after": ["leader", "leader", "leader", "b", "d", "w"]   
+        "before": ["u"],
+        "commands": ["undo"]
+        },
+        {
+        "before": ["<C-r>"],
+        "commands": ["redo"]
         },
     ],
 
-
-    "editor.renderLineHighlight": "all",
+    // ワークベンチ設定
+    "workbench.editor.showTabs": "multiple", // タブを表示
+    "workbench.editor.enablePreview": false, //毎回新規で開く
+    "workbench.editor.enablePreviewFromQuickOpen": false, //毎回新規で開く
     "workbench.colorCustomizations": {
-      "editor.lineHighlightBorder": "#ffffff00",
-      "[Default Dark+]": {
-          "editor.lineHighlightBackground": "#ffffff10",
-      },
-      "[Default Light+]": {
-          "editor.lineHighlightBackground": "#ffffff10",
-      }
+        "editor.lineHighlightBackground": "#002255",
+        "editor.selectionBackground": "#31ca4a77",
+        "editor.selectionHighlightBorder": "#00e1ff",
+        "editorError.border": "#ff0000",
+        "tab.activeBorder": "#ffffff",
+        "tab.inactiveForeground": "#999999",
+        "editorSuggestWidget.selectedBackground": "#4792b4",
+        "editorSuggestWidget.foreground": "#f1efef",
+        "editorWhitespace.foreground": "#8a8888",
+        "statusBar.background": "#161821",
+        "statusBar.noFolderBackground": "#161821",
+        "statusBar.debuggingBackground": "#161821",
+        "statusBar.foreground": "#818596",
+        "statusBar.debuggingForeground": "#818596"
     },
 
     // "// To improve performance",
     "extensions.experimental.affinity": {
-      "vscodevim.vim": 1
-    } ,
+        "vscodevim.vim": 1
+    },
     "clangd.arguments": [
         "--compile-commands-dir=${workspaceFolder}/build",
         "--header-insertion=never",
@@ -62,6 +124,5 @@
         "-std=c++20"
     ],
 
-    "editor.lineNumbers": "relative",
-    "editor.guides.indentation": true,
+
 }
